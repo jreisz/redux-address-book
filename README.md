@@ -1,6 +1,6 @@
 # Redux Address Book
 
-Redux Address Book is a exercise to explore and test using Redux (in a small scale) with React and uses data from the randomuser.me API. 
+Redux Address Book is a exercise to explore and test the use of Redux (in a small scale) with React and uses data from the randomuser.me API. 
 
 ![](https://github.com/leanderlindahl/redux-address-book/blob/master/screenshot.png)
 
