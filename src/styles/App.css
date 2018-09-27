@@ -16,11 +16,11 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 5px 5px 0 0;
 }
 
-.button {
+/* .button {
 	background: #2199e8;
 	box-shadow: 0 -2px 0 rgba(0,0,0,0.2) inset;
 	border-radius: 3px;
-}
+} */
 
 .input-group-label {
 	background: #2199e8;
