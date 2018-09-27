@@ -1,0 +1,240 @@
+.App {
+  text-align: center;
+}
+
+body {
+	font-family: Hind, sans-serif;
+	font-weight: 400;
+	line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: Montserrat, sans-serif;
+}
+
+.badge, .button, .label {
+	margin: 5px 5px 0 0;
+}
+
+.button {
+	background: #2199e8;
+	box-shadow: 0 -2px 0 rgba(0,0,0,0.2) inset;
+	border-radius: 3px;
+}
+
+.input-group-label {
+	background: #2199e8;
+	color: white;
+}
+
+.users-table tbody tr {
+	cursor: pointer;
+}
+
+.top-bar, .top-bar ul {
+	background-color: #2199e8;
+	color: white;
+}
+.top-bar a {
+	color:white;
+}
+
+.arrow-up {
+  width: 0; 
+  height: 0; 
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+	border-bottom: 5px solid #8a8a8a;
+	display: inline-block;
+	margin-bottom: 2px;
+}
+
+.arrow-down {
+  width: 0; 
+  height: 0; 
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+	border-top: 5px solid #8a8a8a;
+	display: inline-block;
+	margin-bottom: 2px;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+	font-size: large;
+	margin: 15px 0 0 0;
+}
+
+/** https://foundation.zurb.com/building-blocks/blocks/dashboard-table.html */
+.dashboard-table {
+  border-collapse: collapse;
+  margin-bottom: 0;
+}
+
+.dashboard-table td {
+  border-bottom: 1px dashed #d7d7d7;
+}
+
+.dashboard-table a {
+  color: #242424;
+}
+
+.dashboard-table .bold {
+  color: #0a0a0a;
+  font-weight: 600;
+}
+
+.dashboard-table thead {
+  background: none;
+  border: 0;
+  border-bottom: 1px solid #e6e6e6;
+  color: #8a8a8a;
+  font-size: 0.8rem;
+}
+
+.dashboard-table thead a {
+  color: #8a8a8a;
+}
+
+.dashboard-table tbody {
+  border: 1px solid #e1e1e1;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.15);
+}
+
+.dashboard-table tbody tr {
+  transition: all 0.5s ease;
+}
+
+.dashboard-table tbody tr:hover {
+  background: #fcf7da;
+  transition: all 0.5s ease;
+}
+
+.dashboard-table tbody tr:nth-child(even) {
+  background: none;
+}
+
+.dashboard-table tr:last-child td {
+  border-bottom: 0;
+}
+
+.dashboard-table-text {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0.5rem;
+}
+
+.dashboard-table-timestamp {
+  color: #9a9a9a;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.dashboard-table-image {
+  display: inline;
+  margin-right: 1rem;
+  margin-top: 0.6rem;
+  max-width: none;
+}
+
+/** */
+.avatar-image {
+  width: 49px;
+  height: 49px;
+  border-radius: 50%;
+  border: 0.0625rem solid #cacaca;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+	-webkit-appearance: searchfield-cancel-button;
+}
+
+/** 
+ * User info card 
+ * https://foundation.zurb.com/building-blocks/blocks/user-card.html
+ */
+
+.card-user-container {
+  margin-bottom: 1rem;
+  background-color: #fefefe;
+  color: #0a0a0a;
+  overflow: hidden;
+  padding: 0;
+  border-radius: 0;
+}
+
+.card-user-container .card-user-avatar .user-image {
+  display: block;
+  margin: auto;
+  border-radius: 50%;
+  width: 11.875rem;
+  height: 11.875rem;
+  padding: 0.9375rem;
+}
+
+.card-user-container .card-user-avatar .user-image:hover {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.card-user-container .card-user-bio {
+  padding: 1rem;
+  text-align: center;
+}
+
+.card-user-container .card-user-bio .location {
+  display: inline-block;
+  margin: 0 0.9375rem;
+  color: #767676;
+  font-size: 0.875rem;
+}
+
+.card-user-container .card-user-bio .location-icon,
+.card-user-container .card-user-bio .location-text {
+  display: inline-block;
+  padding: 0 0.3125rem;
+}
+
+.card-user-container .card-user-social {
+  background: #e6e6e6;
+  padding: 1rem;
+  text-align: center;
+}
+
+.card-user-container .card-user-social ul {
+  display: inline-block;
+}
+
+.card-user-container .card-user-social ul li {
+  margin: 0 10px;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.card-user-container .card-user-social ul li:hover {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.card-user-container .card-user-button {
+  text-align: center;
+  padding: 1rem;
+}
