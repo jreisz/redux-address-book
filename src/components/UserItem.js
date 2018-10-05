@@ -35,14 +35,14 @@ export default class UserItem extends Component {
     return (
       <tr onClick={ev => this.handleClick(ev, `/user:${user.login.username}`)} to={`/user:${user.login.username}`}>
         <td>
-          <img 
-            src={user.picture.thumbnail} 
-            alt={`${firstToUpper(user.name.first)} ${firstToUpper(user.name.last)}`} 
+          <img
+            src={user.picture.thumbnail}
+            alt={`${firstToUpper(user.name.first)} ${firstToUpper(user.name.last)}`}
             className="avatar-image"
           />
         </td>
         <td>
-            {`${firstToUpper(user.name.title)}`}
+          {`${firstToUpper(user.name.title)}`}
         </td>
         <td>{this.getHighlightedText(`${firstToUpper(user.name.first)}`, term)}</td>
         <td>{this.getHighlightedText(`${firstToUpper(user.name.last)}`, term)}</td>

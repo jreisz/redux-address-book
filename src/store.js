@@ -6,12 +6,12 @@ import usersReducer from './reducers/usersReducer';
 import userProfile from './reducers/userProfileReducer';
 
 export default createStore(
-		combineReducers({
-			usersReducer,
-			userProfile
-		}),
-    applyMiddleware(
-				logger,
-        promise()
-    )
+  combineReducers({
+    usersReducer,
+    userProfile,
+  }),
+  applyMiddleware(
+    logger,
+    promise(),
+  ),
 );

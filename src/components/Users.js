@@ -5,8 +5,7 @@ import '../styles/App.css';
 import UserItem from './UserItem';
 import SearchInput from './SearchInput';
 
-class Users extends Component { 
-
+class Users extends Component {
   componentDidMount() {
     const { fetchUsers } = this.props;
     fetchUsers();
@@ -48,14 +47,20 @@ class Users extends Component {
               <tr>
                 <th width="70" />
                 <th width="15">Title</th>
-                <th onClick={ (evt) => sortByKey(evt, 'first', data.firstNameOrder, data.filteredUsers) }>First name <span className={data.firstNameOrder === 'asc' ? `arrow-up` : `arrow-down`}></span></th>
-                <th onClick={ (evt) => sortByKey(evt, 'last', data.lastNameOrder, data.filteredUsers) }>Last Name <span className={data.lastNameOrder === 'asc' ? `arrow-up` : `arrow-down`}></span></th>
+                <th onClick={evt => sortByKey(evt, 'first', data.firstNameOrder, data.filteredUsers)}>
+                  First name&nbsp;
+                  <span className={data.firstNameOrder === 'asc' ? 'arrow-up' : 'arrow-down'} />
+                </th>
+                <th onClick={evt => sortByKey(evt, 'last', data.lastNameOrder, data.filteredUsers)}>
+                  Last Name&nbsp;
+                  <span className={data.lastNameOrder === 'asc' ? 'arrow-up' : 'arrow-down'} />
+                </th>
               </tr>
             </thead>
             <tbody>
               {data.filteredUsers.map((user, i) => {
                 return (
-                  <UserItem 
+                  <UserItem
                     key={i}
                     user={user}
                     onClick={() => setUser(user)}

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 export default class SearchInput extends Component {
-
   render() {
     const { handleSearchInput, handleSubmitQuery, query } = this.props;
     return (

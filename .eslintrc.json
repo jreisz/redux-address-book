@@ -11,6 +11,8 @@
 			"react/require-default-props": 0,
 			"react/no-string-refs": 0,
 			"react/no-array-index-key": 0,
-			"jsx-a11y/no-autofocus": 0
+      "jsx-a11y/no-autofocus": 0,
+      "import/prefer-default-export": 0,
+      "no-case-declarations": 0
 		}
 }

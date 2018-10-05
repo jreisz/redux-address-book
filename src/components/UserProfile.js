@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { browserHistory } from 'react-router';
-import { firstToUpper } from '../utilities/utitlities'
+import { firstToUpper } from '../utilities/utitlities';
 
 const UserProfile = (props) => {
   const history = browserHistory;
@@ -23,10 +23,12 @@ const UserProfile = (props) => {
                 {`${firstToUpper(userProfile.name.title)}. ${firstToUpper(userProfile.name.first)} ${firstToUpper(userProfile.name.last)}`}
               </h4>
               <p>
-                <i className="fi-telephone" />&nbsp;
+                <i className="fi-telephone" />
+                &nbsp;
                 {userProfile.phone}
                 <br />
-                <i className="fi-mail" />&nbsp;
+                <i className="fi-mail" />
+                &nbsp;
                 {userProfile.email}
               </p>
               <span className="location">
