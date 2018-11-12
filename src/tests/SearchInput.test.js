@@ -30,4 +30,13 @@ describe('SearchInput', () => {
 
     expect(mockHandleSubmitQuery).toHaveBeenCalledTimes(1);
   });
+
+  it('handles search input field', () => {
+    wrapper.find('#search-input-field').simulate('change', {
+      preventDefault: () => {},
+      target: { value: 'some value' },
+    });
+
+    expect(mockHandleSearchInput).toHaveBeenCalledTimes(1);
+  });
 });

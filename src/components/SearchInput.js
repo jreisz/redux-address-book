@@ -34,7 +34,11 @@ export default class SearchInput extends Component {
 }
 
 SearchInput.propTypes = {
-  handleSearchInput: PropTypes.func,
-  handleSubmitQuery: PropTypes.func,
+  handleSearchInput: PropTypes.func.isRequired,
+  handleSubmitQuery: PropTypes.func.isRequired,
   query: PropTypes.string,
+};
+
+SearchInput.defaultProps = {
+  query: '',
 };
