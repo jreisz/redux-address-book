@@ -26,12 +26,7 @@ class Users extends Component {
   }
 
   render() {
-    const {
-      data,
-      setUser,
-      setQuery,
-      sortByKey,
-    } = this.props;
+    const { data, setUser, setQuery, sortByKey } = this.props;
 
     return (
       <div className="container">
@@ -40,20 +35,46 @@ class Users extends Component {
           handleSubmitQuery={evt => this.submitQuery(evt)}
           query={data.term}
         />
-        { data.error ? data.error : '' }
+        {data.error ? data.error : ''}
         <section className="block-list">
           <table className="users-table dashboard-table">
             <thead>
               <tr>
                 <th width="70" />
                 <th width="15">Title</th>
-                <th onClick={evt => sortByKey(evt, 'first', data.firstNameOrder, data.filteredUsers)}>
+                <th
+                  onClick={evt =>
+                    sortByKey(
+                      evt,
+                      'first',
+                      data.firstNameOrder,
+                      data.filteredUsers,
+                    )
+                  }
+                >
                   First name&nbsp;
-                  <span className={data.firstNameOrder === 'asc' ? 'arrow-up' : 'arrow-down'} />
+                  <span
+                    className={
+                      data.firstNameOrder === 'asc' ? 'arrow-up' : 'arrow-down'
+                    }
+                  />
                 </th>
-                <th onClick={evt => sortByKey(evt, 'last', data.lastNameOrder, data.filteredUsers)}>
+                <th
+                  onClick={evt =>
+                    sortByKey(
+                      evt,
+                      'last',
+                      data.lastNameOrder,
+                      data.filteredUsers,
+                    )
+                  }
+                >
                   Last Name&nbsp;
-                  <span className={data.lastNameOrder === 'asc' ? 'arrow-up' : 'arrow-down'} />
+                  <span
+                    className={
+                      data.lastNameOrder === 'asc' ? 'arrow-up' : 'arrow-down'
+                    }
+                  />
                 </th>
               </tr>
             </thead>

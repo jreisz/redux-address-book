@@ -6,16 +6,14 @@ const mapStateToProps = state => ({
   data: state.usersReducer,
 });
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    fetchUsers: () => {
-      dispatch(fetchUsers());
-    },
-    setUser: (user) => {
-      dispatch(setUser(user));
-    },
-  };
-};
+const mapDispatchToProps = dispatch => ({
+  fetchUsers() {
+    dispatch(fetchUsers());
+  },
+  setUser(user) {
+    dispatch(setUser(user));
+  },
+});
 
 const AppContainer = connect(
   mapStateToProps,

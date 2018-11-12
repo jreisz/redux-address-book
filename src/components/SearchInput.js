@@ -7,7 +7,7 @@ export default class SearchInput extends Component {
     return (
       <div className="">
         <div className="">
-          <form onSubmit={evt => handleSubmitQuery(evt)}>
+          <form onSubmit={evt => handleSubmitQuery(evt)} id="search-form">
             <div className="input-group">
               <input
                 onChange={evt => handleSearchInput(evt)}
@@ -16,6 +16,7 @@ export default class SearchInput extends Component {
                 type="search"
                 placeholder="Search..."
                 ref="searchInput"
+                id="search-input-field"
                 autoFocus
               />
               <div className="input-group-button">
