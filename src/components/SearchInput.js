@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-export default class SearchInput extends Component {
+export default class SearchInput extends Component {  
   render() {
-    const { handleSearchInput, handleSubmitQuery, query } = this.props;
+    const { handleSearchInput, query } = this.props;
     return (
       <div className="">
         <div className="">
-          <form onSubmit={evt => handleSubmitQuery(evt)} id="search-form">
+          <form  id="search-form">
             <div className="input-group">
               <input
                 onChange={evt => handleSearchInput(evt)}
@@ -35,7 +35,7 @@ export default class SearchInput extends Component {
 
 SearchInput.propTypes = {
   handleSearchInput: PropTypes.func.isRequired,
-  handleSubmitQuery: PropTypes.func.isRequired,
+
   query: PropTypes.string,
 };
 

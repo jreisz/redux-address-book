@@ -1,28 +1,40 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-
 import '../styles/App.css';
 import UserItem from './UserItem';
 import SearchInput from './SearchInput';
 
+const debounce = (function(){
+  var timer = 0;
+  return (function(callback, ms){
+      if(typeof(callback) !== "function"){                
+        throw callback;
+      }
+      this.props.isTyping(true);
+      clearTimeout(timer);
+      timer = setTimeout(callback,ms); 
+  });
+})();
+
 class Users extends Component {
+  
   componentDidMount() {
     const { fetchUsers } = this.props;
     fetchUsers();
   }
+  submitQuery() {
+    this.props.isTyping(false);
+    const {  filterByName, data } = this.props;
 
-  submitQuery(evt) {
-    const { filterByName, data } = this.props;
-    evt.preventDefault();
     filterByName(data.users);
   }
 
-  handleQueryChange(evt) {
-    const { setQuery } = this.props;
-    setQuery(evt);
-    if (evt.target.value.length <= 0) {
-      this.submitQuery(evt);
-    }
+   handleQueryChange(evt) {
+
+    this.props.setQuery(evt);
+
+    debounce(() =>this.submitQuery(), 300)
+    
   }
 
   render() {
@@ -31,9 +43,8 @@ class Users extends Component {
     return (
       <div className="container">
         <SearchInput
-          handleSearchInput={evt => this.handleQueryChange(evt)}
-          handleSubmitQuery={evt => this.submitQuery(evt)}
-          query={data.term}
+          handleSearchInput={evt => this.handleQueryChange(evt)}     
+          query={data.term}     
         />
         {data.error ? data.error : ''}
         <section className="block-list">

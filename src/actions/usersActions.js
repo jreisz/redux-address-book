@@ -13,6 +13,12 @@ export function setUser(user) {
     payload: user,
   };
 }
+export function setTyping(isTyping) {
+  return {
+    type: 'IS_TYPING',
+    payload: isTyping,
+  };
+}
 
 export function setQuery(evt) {
   return {

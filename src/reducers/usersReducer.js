@@ -6,6 +6,9 @@ const initalState = {
   term: '',
   firstNameOrder: 'desc',
   lastNameOrder: 'desc',
+  isTyping:false,
+  startTypingAt:null,
+  delay:300
 };
 
 // REDUCER
@@ -45,16 +48,21 @@ function usersReducer(state = initalState, action) {
     case 'SET_QUERY':
       nextState = { ...state, term: action.payload };
       return nextState;
-
+    case 'IS_TYPING':
+      nextState = { ...state, isTyping: action.payload };
+      return nextState;
     case 'FILTER_BY_NAME':
       const term = state.term.toLowerCase();
       const people = [...action.payload];
       const filteredPeople = people.filter(
-        person => (
-          person.name.first).indexOf(term, 0) === 0
-          || (person.name.last).indexOf(term, 0) === 0
+        person => {
+          return ((person.name.first.toLowerCase()).indexOf(term, 0) === 0
+            || (person.name.last.toLowerCase()).indexOf(term, 0) === 0)
+
+        }
+
       );
-      nextState = { ...state, filteredUsers: filteredPeople };
+      nextState = { ...state, filteredUsers: filteredPeople.slice(0, 5) };
       return nextState;
 
     case 'SORT_BY_KEY':

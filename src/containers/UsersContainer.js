@@ -3,6 +3,7 @@ import Users from '../components/Users';
 import {
   fetchUsers,
   setUser,
+  setTyping,
   setQuery,
   filterByName,
   sortByKey,
@@ -21,6 +22,9 @@ const mapDispatchToProps = dispatch => ({
   },
   setQuery(evt) {
     dispatch(setQuery(evt));
+  },
+  setTyping(isTyping) {
+    dispatch(setTyping(isTyping));
   },
   filterByName(users) {
     dispatch(filterByName(users));
